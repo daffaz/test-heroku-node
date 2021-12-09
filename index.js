@@ -3,7 +3,7 @@ const morgan = require('morgan');
 const cors = require('cors');
 
 const app = express();
-const PORT = 3031;
+const PORT = process.env.PORT | 3001;
 
 app.use(express.json());
 app.use(express.static('dist'));
